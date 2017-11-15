@@ -17,14 +17,16 @@ extension AuthViewController {
         let textField = UITextField()
         textField.backgroundColor = .lightGray
         textField.textAlignment = .center
+        textField.layer.cornerRadius = 5
+        textField.addConstraint(NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200))
         return textField
     }
     
     
     func generateButton() -> UIButton{
         let button = UIButton()
+        button.layer.cornerRadius = 5
         button.backgroundColor = .lightGray
-        button.setTitle("0", for: .normal)
         return button
     }
     
@@ -38,7 +40,7 @@ extension AuthViewController {
         loginButton.setTitle("Login", for: .normal)
         signUpButton = generateButton()
         signUpButton.setTitle("Sign Up", for: .normal)
-        
+
         let loginItems : [UIView] = [emailTextField, passwordTextField, loginButton, signUpButton]
         var loginView = UIStackView()
         loginView = UIStackView(arrangedSubviews: loginItems)
@@ -48,17 +50,18 @@ extension AuthViewController {
         loginView.spacing = 50
         loginView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginView)
-
+        loginView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     
-    func stack(_ grid: UIStackView){
-        let viewsDictionary = ["grid":grid]
-        let stackView_H = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[grid]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDictionary)
-        let stackView_V = NSLayoutConstraint.constraints(withVisualFormat: "V:|-150-[grid]-150-|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: viewsDictionary)
-        view.addConstraints(stackView_H)
-        view.addConstraints(stackView_V)
-    }
+//    func stack(_ grid: UIStackView){
+//        let viewsDictionary = ["grid":grid]
+//        let stackView_H = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[grid]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDictionary)
+//        let stackView_V = NSLayoutConstraint.constraints(withVisualFormat: "V:|-150-[grid]-150-|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: viewsDictionary)
+//        view.addConstraints(stackView_H)
+//        view.addConstraints(stackView_V)
+//    }
     
     
 }
