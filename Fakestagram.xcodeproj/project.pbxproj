@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		BDC976D5F51E4E0D5AA844E8 /* Pods_Fakestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98B062F6A69BE6073482A64 /* Pods_Fakestagram.framework */; };
 		CD002A0C1FBA9FA700DE2CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD002A0B1FBA9FA700DE2CA0 /* AppDelegate.swift */; };
-		CD002A0E1FBA9FA700DE2CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD002A0D1FBA9FA700DE2CA0 /* ViewController.swift */; };
 		CD002A111FBA9FA700DE2CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD002A0F1FBA9FA700DE2CA0 /* Main.storyboard */; };
 		CD002A131FBA9FA700DE2CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD002A121FBA9FA700DE2CA0 /* Assets.xcassets */; };
 		CD002A161FBA9FA700DE2CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD002A141FBA9FA700DE2CA0 /* LaunchScreen.storyboard */; };
 		EB7753F01FBAC85D00E03BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7753EF1FBAC85D00E03BB0 /* GoogleService-Info.plist */; };
+		EB7753F21FBAE61000E03BB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F11FBAE61000E03BB0 /* User.swift */; };
+		EB7753F41FBAE88600E03BB0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F31FBAE88600E03BB0 /* Post.swift */; };
+		EB7753F81FBAF72D00E03BB0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F71FBAF72D00E03BB0 /* AuthViewController.swift */; };
+		EB7753FB1FBAF7DD00E03BB0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753FA1FBAF7DD00E03BB0 /* FeedViewController.swift */; };
+		EB7753FD1FBAF7F200E03BB0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753FC1FBAF7F200E03BB0 /* ProfileViewController.swift */; };
+		EB7753FF1FBAF80300E03BB0 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */; };
+		EB7754011FBAF81800E03BB0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7754001FBAF81800E03BB0 /* SearchViewController.swift */; };
+		EB7EF3391FBBF4D300A3FC35 /* AuthLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EF3381FBBF4D300A3FC35 /* AuthLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +28,20 @@
 		C98B062F6A69BE6073482A64 /* Pods_Fakestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fakestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD002A081FBA9FA700DE2CA0 /* Fakestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fakestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD002A0B1FBA9FA700DE2CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD002A0D1FBA9FA700DE2CA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD002A101FBA9FA700DE2CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD002A121FBA9FA700DE2CA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD002A151FBA9FA700DE2CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD002A171FBA9FA700DE2CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1041C4D1CCCA1219C486C00 /* Pods-Fakestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fakestagram/Pods-Fakestagram.release.xcconfig"; sourceTree = "<group>"; };
 		EB7753EF1FBAC85D00E03BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB7753F11FBAE61000E03BB0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB7753F31FBAE88600E03BB0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EB7753F71FBAF72D00E03BB0 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		EB7753FA1FBAF7DD00E03BB0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		EB7753FC1FBAF7F200E03BB0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		EB7754001FBAF81800E03BB0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EB7EF3381FBBF4D300A3FC35 /* AuthLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				CD002A0B1FBA9FA700DE2CA0 /* AppDelegate.swift */,
-				CD002A0D1FBA9FA700DE2CA0 /* ViewController.swift */,
-				CD002A0F1FBA9FA700DE2CA0 /* Main.storyboard */,
+				EB7753F91FBAF74200E03BB0 /* Auth */,
+				EB7754021FBAF81F00E03BB0 /* Main */,
 				CD002A121FBA9FA700DE2CA0 /* Assets.xcassets */,
 				CD002A141FBA9FA700DE2CA0 /* LaunchScreen.storyboard */,
 				CD002A171FBA9FA700DE2CA0 /* Info.plist */,
@@ -89,6 +103,29 @@
 				C98B062F6A69BE6073482A64 /* Pods_Fakestagram.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB7753F91FBAF74200E03BB0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EB7753F71FBAF72D00E03BB0 /* AuthViewController.swift */,
+				EB7EF3381FBBF4D300A3FC35 /* AuthLayout.swift */,
+				EB7753F11FBAE61000E03BB0 /* User.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EB7754021FBAF81F00E03BB0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EB7753F31FBAE88600E03BB0 /* Post.swift */,
+				CD002A0F1FBA9FA700DE2CA0 /* Main.storyboard */,
+				EB7753FA1FBAF7DD00E03BB0 /* FeedViewController.swift */,
+				EB7753FC1FBAF7F200E03BB0 /* ProfileViewController.swift */,
+				EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */,
+				EB7754001FBAF81800E03BB0 /* SearchViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD002A0E1FBA9FA700DE2CA0 /* ViewController.swift in Sources */,
 				CD002A0C1FBA9FA700DE2CA0 /* AppDelegate.swift in Sources */,
+				EB7753F21FBAE61000E03BB0 /* User.swift in Sources */,
+				EB7754011FBAF81800E03BB0 /* SearchViewController.swift in Sources */,
+				EB7753F41FBAE88600E03BB0 /* Post.swift in Sources */,
+				EB7753FD1FBAF7F200E03BB0 /* ProfileViewController.swift in Sources */,
+				EB7753FF1FBAF80300E03BB0 /* NewPostViewController.swift in Sources */,
+				EB7753FB1FBAF7DD00E03BB0 /* FeedViewController.swift in Sources */,
+				EB7EF3391FBBF4D300A3FC35 /* AuthLayout.swift in Sources */,
+				EB7753F81FBAF72D00E03BB0 /* AuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
