@@ -211,7 +211,6 @@
                     <tabBarItem key="tabBarItem" systemItem="featured" id="5PT-jn-cxN"/>
                     <connections>
                         <outlet property="captionTextField" destination="Oz9-JI-ayM" id="RdB-7n-vvv"/>
-                        <outlet property="postButton" destination="nSk-DJ-d0y" id="BCQ-55-vXI"/>
                         <outlet property="postImageView" destination="1Hr-KE-t9s" id="ewK-gO-6fE"/>
                     </connections>
                 </viewController>
