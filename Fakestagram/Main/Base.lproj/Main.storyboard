@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -151,6 +151,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Change Image"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-k0-uDZ">
+                                <rect key="frame" x="313" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zpL-sT-5he"/>
@@ -170,16 +176,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Hr-KE-t9s">
-                                <rect key="frame" x="10" y="30" width="355" height="377"/>
+                                <rect key="frame" x="10" y="30" width="355" height="328"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz9-JI-ayM">
-                                <rect key="frame" x="50" y="457" width="275" height="30"/>
+                                <rect key="frame" x="50" y="408" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-DJ-d0y">
-                                <rect key="frame" x="150" y="537" width="75" height="30"/>
+                                <rect key="frame" x="150" y="488" width="75" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="postButtonTapped:" destination="5yb-pR-eUJ" eventType="touchUpInside" id="6Bi-kY-9Nv"/>
@@ -202,6 +208,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dmn-NS-2SG"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="5PT-jn-cxN"/>
                     <connections>
                         <outlet property="captionTextField" destination="Oz9-JI-ayM" id="RdB-7n-vvv"/>
                         <outlet property="postButton" destination="nSk-DJ-d0y" id="BCQ-55-vXI"/>
@@ -210,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHE-H1-QfK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.60000000000002" y="14.842578710644679"/>
+            <point key="canvasLocation" x="-529" y="-1442"/>
         </scene>
         <!--Home-->
         <scene sceneID="NfI-y2-BAG">
@@ -254,12 +261,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-k0-uDZ">
-                                <rect key="frame" x="329" y="0.0" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Logout"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -290,6 +291,7 @@
                         <segue destination="rH2-mt-RPq" kind="relationship" relationship="viewControllers" id="odU-Ec-kzm"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wex-Pb-9rl"/>
                         <segue destination="AF7-SO-22D" kind="relationship" relationship="viewControllers" id="hPv-R4-6Tc"/>
+                        <segue destination="5yb-pR-eUJ" kind="relationship" relationship="viewControllers" id="MgD-MZ-thY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPA-9i-jFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
