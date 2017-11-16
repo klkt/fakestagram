@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,7 +63,7 @@
         <!--Profile-->
         <scene sceneID="cP8-Sw-QkO">
             <objects>
-                <viewController id="AF7-SO-22D" customClass="ProfileViewController" customModule="Fakestagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AF7-SO-22D" customClass="ProfileViewController" customModule="Fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Qg-fq-gT7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,57 +148,49 @@
         <!--New Post View Controller-->
         <scene sceneID="FFA-IV-2P2">
             <objects>
-                <viewController id="5yb-pR-eUJ" customClass="NewPostViewController" customModule="Fakestagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5yb-pR-eUJ" customClass="NewPostViewController" customModule="Fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="km2-ua-a1p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pdb-Ep-ZVg">
-                                <rect key="frame" x="60" y="20" width="255" height="253"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="253" id="WJf-Ri-jZJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="253" id="aYo-hA-zE9"/>
-                                    <constraint firstAttribute="width" constant="255" id="aeC-Rk-Mmk"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Hr-KE-t9s">
+                                <rect key="frame" x="10" y="30" width="355" height="377"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a comment..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YeC-u5-4Lg">
-                                <rect key="frame" x="60" y="281" width="255" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="255" id="So1-a9-S5B"/>
-                                    <constraint firstAttribute="height" constant="30" id="iw7-zm-HHE"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ju8-Ca-Bw0"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz9-JI-ayM">
+                                <rect key="frame" x="50" y="457" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWE-9O-oNm">
-                                <rect key="frame" x="164" y="342" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="WM0-Vn-w2i"/>
-                                    <constraint firstAttribute="width" constant="46" id="ffn-OI-dZk"/>
-                                </constraints>
-                                <state key="normal" title="Post">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-DJ-d0y">
+                                <rect key="frame" x="150" y="537" width="75" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="postButtonTapped:" destination="5yb-pR-eUJ" eventType="touchUpInside" id="6Bi-kY-9Nv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YeC-u5-4Lg" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="60" id="8Ej-OF-azR"/>
-                            <constraint firstItem="HWE-9O-oNm" firstAttribute="top" secondItem="YeC-u5-4Lg" secondAttribute="bottom" constant="31" id="8UV-7x-XzP"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="YeC-u5-4Lg" secondAttribute="trailing" constant="60" id="Dpv-y5-984"/>
-                            <constraint firstItem="pdb-Ep-ZVg" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="60" id="E8E-Sy-K7C"/>
-                            <constraint firstItem="HWE-9O-oNm" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="164" id="KVp-6o-fqS"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="HWE-9O-oNm" secondAttribute="trailing" constant="165" id="eUB-o7-lH2"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="bottom" secondItem="HWE-9O-oNm" secondAttribute="bottom" constant="295" id="g0H-ZV-Yiq"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="pdb-Ep-ZVg" secondAttribute="trailing" constant="60" id="gl7-eS-Aix"/>
-                            <constraint firstItem="YeC-u5-4Lg" firstAttribute="top" secondItem="pdb-Ep-ZVg" secondAttribute="bottom" constant="8" id="wZ2-gA-pAl"/>
-                            <constraint firstItem="pdb-Ep-ZVg" firstAttribute="top" secondItem="Dmn-NS-2SG" secondAttribute="top" id="xH4-ND-mxm"/>
+                            <constraint firstItem="1Hr-KE-t9s" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="10" id="Op7-XO-ct3"/>
+                            <constraint firstItem="nSk-DJ-d0y" firstAttribute="top" secondItem="Oz9-JI-ayM" secondAttribute="bottom" constant="50" id="Rk8-gv-81w"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="bottom" secondItem="nSk-DJ-d0y" secondAttribute="bottom" constant="100" id="Vxr-vo-QdF"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="Oz9-JI-ayM" secondAttribute="trailing" constant="50" id="Xhs-g5-QgH"/>
+                            <constraint firstItem="Oz9-JI-ayM" firstAttribute="top" secondItem="1Hr-KE-t9s" secondAttribute="bottom" constant="50" id="auf-zw-bwF"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="1Hr-KE-t9s" secondAttribute="trailing" constant="10" id="guv-vB-eey"/>
+                            <constraint firstItem="Oz9-JI-ayM" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="50" id="hcv-u8-5Sh"/>
+                            <constraint firstItem="1Hr-KE-t9s" firstAttribute="top" secondItem="Dmn-NS-2SG" secondAttribute="top" constant="10" id="jMM-xv-zBO"/>
+                            <constraint firstItem="Oz9-JI-ayM" firstAttribute="top" secondItem="1Hr-KE-t9s" secondAttribute="bottom" constant="50" id="jpc-Mh-nsI"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="nSk-DJ-d0y" secondAttribute="trailing" constant="150" id="nEP-9t-10f"/>
+                            <constraint firstItem="nSk-DJ-d0y" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="150" id="ysn-LC-cN5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dmn-NS-2SG"/>
                     </view>
+                    <connections>
+                        <outlet property="captionTextField" destination="Oz9-JI-ayM" id="RdB-7n-vvv"/>
+                        <outlet property="postButton" destination="nSk-DJ-d0y" id="BCQ-55-vXI"/>
+                        <outlet property="postImageView" destination="1Hr-KE-t9s" id="ewK-gO-6fE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHE-H1-QfK" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,7 +199,7 @@
         <!--Home-->
         <scene sceneID="NfI-y2-BAG">
             <objects>
-                <viewController id="rH2-mt-RPq" customClass="FeedViewController" customModule="Fakestagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rH2-mt-RPq" customClass="FeedViewController" customModule="Fakestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MvC-Ab-Z5R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

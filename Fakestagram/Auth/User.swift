@@ -9,6 +9,7 @@
 import Foundation
 
 class User {
+    static var loggedInUser : User = User()
     var uid : String = ""
     var email : String = ""
     var bio : String = ""
@@ -16,10 +17,12 @@ class User {
     var following : [String] = []
     var followers : [String] = []
     
-    init(uid: String, email: String, bio: String, profilePicUrl: String ){
+    init(){
+        
+    }
+    
+    init(uid: String, email: String){
         self.uid = uid
         self.email = email
-        self.bio = bio
-        self.profilePicUrl = profilePicUrl
     }
 }

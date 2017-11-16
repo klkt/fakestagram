@@ -15,12 +15,14 @@
 		EB7753F01FBAC85D00E03BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7753EF1FBAC85D00E03BB0 /* GoogleService-Info.plist */; };
 		EB7753F21FBAE61000E03BB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F11FBAE61000E03BB0 /* User.swift */; };
 		EB7753F41FBAE88600E03BB0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F31FBAE88600E03BB0 /* Post.swift */; };
-		EB7753F81FBAF72D00E03BB0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F71FBAF72D00E03BB0 /* AuthViewController.swift */; };
 		EB7753FB1FBAF7DD00E03BB0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753FA1FBAF7DD00E03BB0 /* FeedViewController.swift */; };
 		EB7753FD1FBAF7F200E03BB0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753FC1FBAF7F200E03BB0 /* ProfileViewController.swift */; };
 		EB7753FF1FBAF80300E03BB0 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */; };
 		EB7754011FBAF81800E03BB0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7754001FBAF81800E03BB0 /* SearchViewController.swift */; };
 		EB7EF3391FBBF4D300A3FC35 /* AuthLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EF3381FBBF4D300A3FC35 /* AuthLayout.swift */; };
+		EB7EF3411FBC353F00A3FC35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EF3401FBC353F00A3FC35 /* LoginViewController.swift */; };
+		EB7EF3431FBC35AF00A3FC35 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EF3421FBC35AF00A3FC35 /* SignUpViewController.swift */; };
+		EB7EF3451FBC535F00A3FC35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EF3441FBC535F00A3FC35 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +38,14 @@
 		EB7753EF1FBAC85D00E03BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7753F11FBAE61000E03BB0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB7753F31FBAE88600E03BB0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		EB7753F71FBAF72D00E03BB0 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		EB7753FA1FBAF7DD00E03BB0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EB7753FC1FBAF7F200E03BB0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		EB7754001FBAF81800E03BB0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EB7EF3381FBBF4D300A3FC35 /* AuthLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLayout.swift; sourceTree = "<group>"; };
+		EB7EF3401FBC353F00A3FC35 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB7EF3421FBC35AF00A3FC35 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EB7EF3441FBC535F00A3FC35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +112,9 @@
 		EB7753F91FBAF74200E03BB0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				EB7753F71FBAF72D00E03BB0 /* AuthViewController.swift */,
+				EB7EF3401FBC353F00A3FC35 /* LoginViewController.swift */,
+				EB7EF3421FBC35AF00A3FC35 /* SignUpViewController.swift */,
+				EB7EF3441FBC535F00A3FC35 /* Extensions.swift */,
 				EB7EF3381FBBF4D300A3FC35 /* AuthLayout.swift */,
 				EB7753F11FBAE61000E03BB0 /* User.swift */,
 			);
@@ -268,11 +274,13 @@
 				EB7753F21FBAE61000E03BB0 /* User.swift in Sources */,
 				EB7754011FBAF81800E03BB0 /* SearchViewController.swift in Sources */,
 				EB7753F41FBAE88600E03BB0 /* Post.swift in Sources */,
+				EB7EF3431FBC35AF00A3FC35 /* SignUpViewController.swift in Sources */,
 				EB7753FD1FBAF7F200E03BB0 /* ProfileViewController.swift in Sources */,
 				EB7753FF1FBAF80300E03BB0 /* NewPostViewController.swift in Sources */,
 				EB7753FB1FBAF7DD00E03BB0 /* FeedViewController.swift in Sources */,
 				EB7EF3391FBBF4D300A3FC35 /* AuthLayout.swift in Sources */,
-				EB7753F81FBAF72D00E03BB0 /* AuthViewController.swift in Sources */,
+				EB7EF3451FBC535F00A3FC35 /* Extensions.swift in Sources */,
+				EB7EF3411FBC353F00A3FC35 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

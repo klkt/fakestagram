@@ -2,58 +2,43 @@
 //  SignUpViewController.swift
 //  Fakestagram
 //
-//  Created by Jacob Schantz on 11/14/17.
+//  Created by Jacob Schantz on 11/15/17.
 //  Copyright © 2017 Kenny Lim. All rights reserved.
 //
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
-class LoginViewController: AuthLayout {
-    
+
+class SignUpViewController : AuthLayout {
 
     var emailTextField : UITextField = UITextField()
     var passwordTextField : UITextField = UITextField()
-    var loginButton : UIButton = UIButton(){
-        didSet{
-            loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
-        }
-    }
     var signUpButton : UIButton = UIButton(){
         didSet{
             signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         }
     }
-    
-    
-    @objc func loginButtonTapped() {
+    @objc func signUpButtonTapped(){
+        let ref = Database.database().reference()
+        
         guard let email = emailTextField.text,
             let password = passwordTextField.text
-            else {return}
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            else{return}
+
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
             if let validError = error {
-                self.alert("Error", validError.localizedDescription)
+                self.alert("error", validError.localizedDescription)
             }
-            
-            if let validUser = user {
-                
-                let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                guard let vc = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as? FeedViewController
-                    else{return}
-                let nav = UINavigationController(rootViewController: vc)
-                self.present(nav, animated: true, completion: nil)
-                
-                User.loggedInUser = User(uid: validUser.uid, email: email)
+            if let validUser = user{
+                self.navigationController?.popViewController(animated: true)
+                let uid = validUser.uid
+                let userEmail : [String:Any] = ["email": email]
+                ref.child("users").child(uid).setValue(userEmail)
             }
         }
-    }
-    
-    
-    @objc func signUpButtonTapped(){
-        let signUpVC = SignUpViewController()
-        navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     
@@ -62,22 +47,29 @@ class LoginViewController: AuthLayout {
         view.backgroundColor = .white
         createStackView()
     }
+    
+}
+
+
+
+extension SignUpViewController {
+    
+    
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
     }
     
     
     func createLoginViews() {
         emailTextField = createEmailTextField()
         passwordTextField = createPasswordTextField()
-        loginButton = createLoginButton()
         signUpButton = createSignUpButton()
     }
     
     
     func createStackView(){
         createLoginViews()
-        let loginViews : [UIView] = [emailTextField, passwordTextField, loginButton, signUpButton]
+        let loginViews : [UIView] = [emailTextField, passwordTextField, signUpButton]
         var loginStackView = UIStackView()
         loginStackView = UIStackView(arrangedSubviews: loginViews)
         loginStackView.axis = .vertical
@@ -90,5 +82,5 @@ class LoginViewController: AuthLayout {
         loginStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    
 }
+
