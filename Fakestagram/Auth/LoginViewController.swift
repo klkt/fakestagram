@@ -40,10 +40,9 @@ class LoginViewController: AuthLayout {
             if let validUser = user {
                 
                 let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                guard let vc = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as? FeedViewController
+                guard let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
                     else{return}
-                let nav = UINavigationController(rootViewController: vc)
-                self.present(nav, animated: true, completion: nil)
+                self.present(vc, animated: true, completion: nil)
                 
                 User.loggedInUser = User(uid: validUser.uid, email: email)
             }
