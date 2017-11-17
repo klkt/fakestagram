@@ -39,7 +39,8 @@ class NewPostViewController: UIViewController {
             }
 
             if let validURL = url?.absoluteString {
-                let newPost = Post(postId: selectedPost.key, ownerId: User.loggedInUser.uid, pictureUrl: validURL, timeStamp: Date().timeIntervalSince1970)
+                let newPost = Post(ownerId: User.loggedInUser.uid, pictureUrl: validURL, timeStamp: Date().timeIntervalSince1970)
+                newPost.postId = selectedPost.key
                 if let caption = self.captionTextView.text{
                     if caption != "" {
                         newPost.caption = caption

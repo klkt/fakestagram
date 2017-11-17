@@ -19,8 +19,7 @@ class Post {
     var likers : [String] = []
     var comments : [Comment] = []
     
-    init(postId: String,ownerId: String, pictureUrl: String, timeStamp: Double){
-        self.postId = postId
+    init(ownerId: String, pictureUrl: String, timeStamp: Double){
         self.ownerId = ownerId
         self.pictureUrl = pictureUrl
         self.timeStamp = timeStamp
@@ -32,7 +31,7 @@ class Post {
         // store in posts
         let posts = ref.child("posts")
         let thisPost = posts.child(self.postId)
-        let dict = ["owner" : self.ownerId, "timeStamp" : self.timeStamp] as [String : Any]
+        let dict = ["pictureUrl": self.pictureUrl, "ownerId" : self.ownerId, "timeStamp" : self.timeStamp] as [String : Any]
         thisPost.setValue(dict)
         if self.caption != "" {
             thisPost.updateChildValues(["caption" : self.caption])
