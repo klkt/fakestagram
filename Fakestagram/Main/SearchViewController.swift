@@ -34,9 +34,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "user") as! User
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let user = userArray[indexPath.row]
-        cell.uid = String(describing: user)
+//        cell.uid = String(describing: user)
+        cell.textLabel?.text = user.email
         return cell
         }
     
