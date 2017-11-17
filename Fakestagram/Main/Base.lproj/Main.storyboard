@@ -212,48 +212,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="1440x900_HD_Wallpaper_194" translatesAutoresizingMaskIntoConstraints="NO" id="1Hr-KE-t9s">
-                                <rect key="frame" x="10" y="30" width="355" height="328"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert caption here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz9-JI-ayM">
-                                <rect key="frame" x="50" y="408" width="275" height="30"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-7E-dSG">
+                                <rect key="frame" x="25" y="461" width="325" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="ljK-gG-UQV"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-DJ-d0y">
-                                <rect key="frame" x="150" y="488" width="75" height="30"/>
-                                <state key="normal" title="Post"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6a-KG-M7Y">
+                                <rect key="frame" x="150" y="548" width="75" height="30"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="postButtonTapped:" destination="5yb-pR-eUJ" eventType="touchUpInside" id="6Bi-kY-9Nv"/>
+                                    <action selector="postButtonTapped:" destination="5yb-pR-eUJ" eventType="touchUpInside" id="uFt-2a-R3q"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-CZ-yxk">
+                                <rect key="frame" x="25" y="45" width="325" height="391"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1Hr-KE-t9s" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="10" id="Op7-XO-ct3"/>
-                            <constraint firstItem="nSk-DJ-d0y" firstAttribute="top" secondItem="Oz9-JI-ayM" secondAttribute="bottom" constant="50" id="Rk8-gv-81w"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="bottom" secondItem="nSk-DJ-d0y" secondAttribute="bottom" constant="100" id="Vxr-vo-QdF"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="Oz9-JI-ayM" secondAttribute="trailing" constant="50" id="Xhs-g5-QgH"/>
-                            <constraint firstItem="Oz9-JI-ayM" firstAttribute="top" secondItem="1Hr-KE-t9s" secondAttribute="bottom" constant="50" id="auf-zw-bwF"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="1Hr-KE-t9s" secondAttribute="trailing" constant="10" id="guv-vB-eey"/>
-                            <constraint firstItem="Oz9-JI-ayM" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="50" id="hcv-u8-5Sh"/>
-                            <constraint firstItem="1Hr-KE-t9s" firstAttribute="top" secondItem="Dmn-NS-2SG" secondAttribute="top" constant="10" id="jMM-xv-zBO"/>
-                            <constraint firstItem="Oz9-JI-ayM" firstAttribute="top" secondItem="1Hr-KE-t9s" secondAttribute="bottom" constant="50" id="jpc-Mh-nsI"/>
-                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="nSk-DJ-d0y" secondAttribute="trailing" constant="150" id="nEP-9t-10f"/>
-                            <constraint firstItem="nSk-DJ-d0y" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="150" id="ysn-LC-cN5"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="UUE-7E-dSG" secondAttribute="trailing" constant="25" id="4mv-AL-sL0"/>
+                            <constraint firstItem="B6a-KG-M7Y" firstAttribute="top" secondItem="UUE-7E-dSG" secondAttribute="bottom" constant="25" id="HRO-eG-Ia7"/>
+                            <constraint firstItem="UUE-7E-dSG" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="25" id="J1g-4e-Pb5"/>
+                            <constraint firstItem="tIT-CZ-yxk" firstAttribute="top" secondItem="Dmn-NS-2SG" secondAttribute="top" constant="25" id="Jwm-ez-ril"/>
+                            <constraint firstItem="UUE-7E-dSG" firstAttribute="top" secondItem="tIT-CZ-yxk" secondAttribute="bottom" constant="25" id="RIh-ez-43o"/>
+                            <constraint firstItem="tIT-CZ-yxk" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="25" id="Sg9-mm-v6J"/>
+                            <constraint firstItem="B6a-KG-M7Y" firstAttribute="top" secondItem="UUE-7E-dSG" secondAttribute="bottom" constant="25" id="T1c-m8-tjf"/>
+                            <constraint firstItem="UUE-7E-dSG" firstAttribute="top" secondItem="tIT-CZ-yxk" secondAttribute="bottom" constant="25" id="dn8-So-ZlN"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="tIT-CZ-yxk" secondAttribute="trailing" constant="25" id="e5a-Ci-JZB"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="trailing" secondItem="B6a-KG-M7Y" secondAttribute="trailing" constant="150" id="lHc-Jf-Ql8"/>
+                            <constraint firstItem="Dmn-NS-2SG" firstAttribute="bottom" secondItem="B6a-KG-M7Y" secondAttribute="bottom" constant="40" id="mcg-a4-8Qh"/>
+                            <constraint firstItem="B6a-KG-M7Y" firstAttribute="leading" secondItem="Dmn-NS-2SG" secondAttribute="leading" constant="150" id="ont-zN-dM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dmn-NS-2SG"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="5PT-jn-cxN"/>
                     <connections>
-                        <outlet property="captionTextField" destination="Oz9-JI-ayM" id="RdB-7n-vvv"/>
-                        <outlet property="postImageView" destination="1Hr-KE-t9s" id="ewK-gO-6fE"/>
+                        <outlet property="captionTextView" destination="UUE-7E-dSG" id="x48-MV-pLI"/>
+                        <outlet property="postImageView" destination="tIT-CZ-yxk" id="Y2Y-zY-tXJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHE-H1-QfK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="-1442"/>
+            <point key="canvasLocation" x="-530.39999999999998" y="-1442.4287856071965"/>
         </scene>
         <!--Home-->
         <scene sceneID="NfI-y2-BAG">
@@ -267,7 +272,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="270" id="5jA-KA-aLy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" rowHeight="270" id="5jA-KA-aLy">
                                         <rect key="frame" x="0.0" y="28" width="375" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5jA-KA-aLy" id="7nE-TQ-7sn">
@@ -308,6 +313,9 @@
                         <viewLayoutGuide key="safeArea" id="Ftx-ay-E3M"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="home" id="Dpd-5F-Dmt"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="inr-IB-jif" id="t2d-BA-wBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fru-De-9vS" sceneMemberID="firstResponder"/>
             </objects>
@@ -337,7 +345,6 @@
     </scenes>
     <resources>
         <image name="-Wallpapers-Room-Com-Fires-Of-Heaven-By-Orikon-1440x900-New-Hd-Wallpaper--" width="1440" height="900"/>
-        <image name="1440x900_HD_Wallpaper_194" width="1440" height="900"/>
         <image name="attractive-hd-nature-wallpapers" width="1440" height="900"/>
         <image name="home" width="16" height="16"/>
         <image name="user" width="16" height="16"/>

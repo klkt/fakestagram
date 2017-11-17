@@ -12,6 +12,7 @@
 		CD002A111FBA9FA700DE2CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD002A0F1FBA9FA700DE2CA0 /* Main.storyboard */; };
 		CD002A131FBA9FA700DE2CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD002A121FBA9FA700DE2CA0 /* Assets.xcassets */; };
 		CD002A161FBA9FA700DE2CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD002A141FBA9FA700DE2CA0 /* LaunchScreen.storyboard */; };
+		EB58C9511FBD77E000CC9CEE /* StoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB58C9501FBD77E000CC9CEE /* StoreImage.swift */; };
 		EB7753F01FBAC85D00E03BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7753EF1FBAC85D00E03BB0 /* GoogleService-Info.plist */; };
 		EB7753F21FBAE61000E03BB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F11FBAE61000E03BB0 /* User.swift */; };
 		EB7753F41FBAE88600E03BB0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7753F31FBAE88600E03BB0 /* Post.swift */; };
@@ -35,6 +36,7 @@
 		CD002A151FBA9FA700DE2CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD002A171FBA9FA700DE2CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1041C4D1CCCA1219C486C00 /* Pods-Fakestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fakestagram/Pods-Fakestagram.release.xcconfig"; sourceTree = "<group>"; };
+		EB58C9501FBD77E000CC9CEE /* StoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImage.swift; sourceTree = "<group>"; };
 		EB7753EF1FBAC85D00E03BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7753F11FBAE61000E03BB0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB7753F31FBAE88600E03BB0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -125,10 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				EB7753F31FBAE88600E03BB0 /* Post.swift */,
+				EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */,
+				EB58C9501FBD77E000CC9CEE /* StoreImage.swift */,
 				CD002A0F1FBA9FA700DE2CA0 /* Main.storyboard */,
 				EB7753FA1FBAF7DD00E03BB0 /* FeedViewController.swift */,
 				EB7753FC1FBAF7F200E03BB0 /* ProfileViewController.swift */,
-				EB7753FE1FBAF80300E03BB0 /* NewPostViewController.swift */,
 				EB7754001FBAF81800E03BB0 /* SearchViewController.swift */,
 			);
 			path = Main;
@@ -273,6 +276,7 @@
 				CD002A0C1FBA9FA700DE2CA0 /* AppDelegate.swift in Sources */,
 				EB7753F21FBAE61000E03BB0 /* User.swift in Sources */,
 				EB7754011FBAF81800E03BB0 /* SearchViewController.swift in Sources */,
+				EB58C9511FBD77E000CC9CEE /* StoreImage.swift in Sources */,
 				EB7753F41FBAE88600E03BB0 /* Post.swift in Sources */,
 				EB7EF3431FBC35AF00A3FC35 /* SignUpViewController.swift in Sources */,
 				EB7753FD1FBAF7F200E03BB0 /* ProfileViewController.swift in Sources */,
