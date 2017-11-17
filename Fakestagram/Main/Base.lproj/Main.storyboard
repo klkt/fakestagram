@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,9 +24,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="BYZ-38-t0r" id="IqK-0q-HcJ"/>
-                                    </connections>
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="BkR-sR-Iy8" style="IBUITableViewCellStyleDefault" id="fQK-5S-SPY">
@@ -47,10 +44,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MX8-fx-FBB"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ShJ-4o-N3e"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,35 +54,16 @@
                             <constraint firstItem="33g-y7-LaQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lPq-gg-RXV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outlet property="searchBar" destination="33g-y7-LaQ" id="KHu-hh-O96"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="X6E-0w-EuO"/>
                     <connections>
-                        <outlet property="searchBar" destination="IU3-2M-KCb" id="bWJ-fv-3hs"/>
-                        <outlet property="searchDisplayController" destination="9SM-cw-nWs" id="pmZ-nj-FBF"/>
-                        <outlet property="tableView" destination="33g-y7-LaQ" id="nGT-MI-pZ8"/>
+                        <outlet property="searchBar" destination="IU3-2M-KCb" id="ZD4-ZE-itq"/>
+                        <outlet property="tableView" destination="33g-y7-LaQ" id="vMm-hO-ePC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="9xh-fs-qfT">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="QcY-o1-SEV"/>
-                        <outlet property="searchBar" destination="IU3-2M-KCb" id="2TK-wY-Mux"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="KQP-ok-Iad"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="m0J-pz-hbi"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="VV1-zb-4Gj"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="9SM-cw-nWs">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="GF2-DX-Lpq"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Taf-tS-63O"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="J6Q-gY-5sG"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="0FA-37-Pax"/>
-                    </connections>
-                </searchDisplayController>
+                <searchDisplayController id="9xh-fs-qfT"/>
+                <searchDisplayController id="9SM-cw-nWs"/>
             </objects>
             <point key="canvasLocation" x="-530.39999999999998" y="825.33733133433293"/>
         </scene>

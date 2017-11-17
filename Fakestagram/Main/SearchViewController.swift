@@ -14,12 +14,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    //@IBOutlet weak var textLabel: UILabel!
-    
-    var userArray = [User]()
+    var userArray : [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+        
+        arrayOfUsers()
+        userSearchBar()
         
     }
     
@@ -31,18 +34,31 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-            return UITableViewCell()
-        }
-        
-       // cell.textLabel?.text = userArray[indexPath.row].uid
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let user = userArray[indexPath.row]
+//        cell.uid = String(describing: user)
+        cell.textLabel?.text = user.email
         return cell
+        }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let PvC = Storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
+            else {return}
+        self.navigationController?.pushViewController(PvC, animated: true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func userSearchBar() {
+            self.userArray.removeAll()
+            self.tableView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        userSearchBar()
+        }
+    
     }
     
 
-}
+
