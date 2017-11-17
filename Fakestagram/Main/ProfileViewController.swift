@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -63,7 +64,15 @@ class ProfileViewController: UIViewController {
 
     }
     
-   
+    func logOut(){
+        do {
+            try Auth.auth().signOut()
+            NotificationCenter.appLogout()
+        }
+        catch {
+            
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

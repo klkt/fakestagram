@@ -39,11 +39,12 @@ class LoginViewController: AuthLayout {
             
             if let validUser = user {
                 
-                let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                guard let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
-                    else{return}
-                self.present(vc, animated: true, completion: nil)
-                
+//                let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//                guard let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
+//                    else{return}
+//                self.present(vc, animated: true, completion: nil)
+
+                NotificationCenter.appLogin()
                 User.loggedInUser = User(uid: validUser.uid, email: email)
             }
         }

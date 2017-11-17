@@ -18,13 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        addNotificationObservers()
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let mainView = LoginViewController(nibName: nil, bundle: nil)
-        let nav = UINavigationController()
-        nav.viewControllers = [mainView]
-        self.window!.rootViewController = nav
-        self.window?.makeKeyAndVisible()
+        if Auth.auth().currentUser != nil {
+            goToMain()
+        } else {
+            goToAuth()
+        }
         return true
     }
 
@@ -48,6 +48,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func addNotificationObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(authSuccessNotifactionHandler), name: Notification.Name(rawValue: "AuthLogin"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(logOutSuccessNotifactionHandler), name: Notification.Name(rawValue: "AuthLogout"), object: nil)
+    }
+    @objc func authSuccessNotifactionHandler(notification: Notification){
+        print("Notification Recived")
+        goToMain()
+    }
+    func goToMain() {
+        let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
+        window?.rootViewController = VC
+        self.window?.makeKeyAndVisible()
+    }
+    @objc func logOutSuccessNotifactionHandler(notification: Notification){
+        print("Notification Recived")
+        goToAuth()
+    }
+    
+    func goToAuth() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let mainView = LoginViewController(nibName: nil, bundle: nil)
+        let nav = UINavigationController()
+        nav.viewControllers = [mainView]
+        self.window!.rootViewController = nav
+        self.window?.makeKeyAndVisible()
     }
 
 
