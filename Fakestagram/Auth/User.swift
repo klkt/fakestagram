@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class User {
     static var loggedInUser : User = User()
@@ -16,6 +17,7 @@ class User {
     var profilePicUrl : String = ""
     var following : [String] = []
     var followers : [String] = []
+    var posts : [String] = []
     
     init(){
         

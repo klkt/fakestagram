@@ -7,21 +7,42 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 
 class Post {
     var postId : String = ""
     var ownerId : String = ""
     var pictureUrl : String = ""
+    var caption : String = ""
     var timeStamp : Double = 0.0
     var likers : [String] = []
     var comments : [Comment] = []
     
-    init(postId: String, ownerId: String, pictureUrl: String, timeStamp: Double ){
+    init(postId: String,ownerId: String, pictureUrl: String, timeStamp: Double){
         self.postId = postId
         self.ownerId = ownerId
         self.pictureUrl = pictureUrl
         self.timeStamp = timeStamp
+    }
+    
+    func saveToDatabase(){
+        let ref = Database.database().reference()
+
+        // store in posts
+        let posts = ref.child("posts")
+        let thisPost = posts.child(self.postId)
+        let dict = ["owner" : self.ownerId, "timeStamp" : self.timeStamp] as [String : Any]
+        thisPost.setValue(dict)
+        if self.caption != "" {
+            thisPost.updateChildValues(["caption" : self.caption])
+        }
+        
+        // store postId in owner
+        let users = ref.child("users")
+        let owner = users.child(self.ownerId)
+        let ownedPosts = owner.child("posts")
+        ownedPosts.updateChildValues(["\(postId)" : true])
     }
 }
 
