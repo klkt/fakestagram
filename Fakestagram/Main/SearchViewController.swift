@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating {
+    
 
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -21,12 +22,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         searchBar.delegate = self
         
-        arrayOfUsers()
         userSearchBar()
         
     }
     
-    func arrayOfUsers() {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        self.tableView.reloadData()
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,8 +39,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let user = userArray[indexPath.row]
-//        cell.uid = String(describing: user)
-        cell.textLabel?.text = user.email
+        cell.textLabel?.text = user.uid
         return cell
         }
     
@@ -50,8 +52,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func userSearchBar() {
-            self.userArray.removeAll()
-            self.tableView.reloadData()
+        if searchBar.text! == "" {
+            userArray = []
+        } else {
+            userArray = userArray.filter { $0.uid.lowercased().contains(searchBar.text!.lowercased()) }
+        }
+        self.tableView.reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
